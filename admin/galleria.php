@@ -2,7 +2,7 @@
 include('../vendor/autoload.php');
 include('header.php');
 
-$perPagina = 1;
+$perPagina = 20;
 $pagination = new PaginationController;
 
 $galleria = new GalleriaController;
