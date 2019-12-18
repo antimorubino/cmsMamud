@@ -1,0 +1,35 @@
+RewriteEngine on
+
+ErrorDocument 400 /error.php?err=400
+ErrorDocument 401 /error.php?err=401
+ErrorDocument 403 /error.php?err=403
+ErrorDocument 404 /error.php?err=404
+ErrorDocument 500 /error.php?err=500
+
+#RewriteRule ^sitemap.xml ./sitemap.php [L,QSA]
+
+#RewriteBase /it/
+
+##Italiano
+
+RewriteRule ^it/$ index.php?idPage=1&lang=it [L,QSA]
+RewriteRule ^it/Azienda/$ page.php?idPage=2&lang=it [L,QSA]
+RewriteRule ^it/Servizi/$ page.php?idPage=3&lang=it [L,QSA]
+RewriteRule ^it/News/$ news.php?lang=it [L,QSA]
+RewriteRule ^it/News/([^/]*)/([^/]*)/$ dett-news.php?tnews=$1&idNew=$2&lang=it [L,QSA]
+RewriteRule ^it/Foto/$ foto.php?lang=it [L,QSA]
+RewriteRule ^it/Foto/([^/]*)/([^/]*)/$ dett-foto.php?categoria=$1&idCat=$2&lang=it [L,QSA]
+RewriteRule ^it/Video/$ video.php?lang=it [L,QSA]
+RewriteRule ^it/Contatti/$ page.php?idPage=4&lang=it [L,QSA]
+
+#Inglese
+
+RewriteRule ^en/$ index.php?idPage=1&lang=en [L,QSA]
+RewriteRule ^en/Company/$ page.php?idPage=2&lang=en [L,QSA]
+RewriteRule ^en/Services/$ page.php?idPage=3&lang=en [L,QSA]
+RewriteRule ^en/News/$ news.php?lang=en [L,QSA]
+RewriteRule ^en/News/([^/]*)/([^/]*)/$ dett-news.php?tnews=$1&idNew=$2&lang=en [L,QSA]
+RewriteRule ^en/Photo/$ foto.php?lang=en [L,QSA]
+RewriteRule ^en/Photo/([^/]*)/([^/]*)/$ dett-foto.php?categoria=$1&idCat=$2&lang=en [L,QSA]
+RewriteRule ^en/Video/$ video.php?lang=en [L,QSA]
+RewriteRule ^en/Contacts/$ page.php?idPage=4&lang=en [L,QSA]
