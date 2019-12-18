@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Dic 18, 2019 alle 15:37
+-- Creato il: Dic 18, 2019 alle 17:13
 -- Versione del server: 10.1.38-MariaDB
 -- Versione PHP: 7.3.2
 
@@ -33,14 +33,6 @@ CREATE TABLE `cld_catgalleria` (
   `categoriaIT` varchar(255) DEFAULT NULL,
   `categoriaEN` varchar(255) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
---
--- Dump dei dati per la tabella `cld_catgalleria`
---
-
-INSERT INTO `cld_catgalleria` (`idCategoria`, `categoriaIT`, `categoriaEN`) VALUES
-(2, 'prova test', 'dfgfdgdfgfd'),
-(3, 'hjjfghdfgdgdf', 'hjjfghdfgdgdf');
 
 -- --------------------------------------------------------
 
@@ -78,14 +70,6 @@ CREATE TABLE `cld_galleria` (
   `Img` varchar(255) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
---
--- Dump dei dati per la tabella `cld_galleria`
---
-
-INSERT INTO `cld_galleria` (`idGalleria`, `idCategoria`, `Img`) VALUES
-(1, 2, 'DSC_1557.jpg'),
-(2, 2, 'DSC_1568.jpg');
-
 -- --------------------------------------------------------
 
 --
@@ -115,15 +99,6 @@ CREATE TABLE `cld_news` (
   `ContenutoEN` text,
   `Immagine` varchar(255) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
---
--- Dump dei dati per la tabella `cld_news`
---
-
-INSERT INTO `cld_news` (`idNews`, `Data`, `TitoloIT`, `TitoloEN`, `ContenutoIT`, `ContenutoEN`, `Immagine`) VALUES
-(17, '2019-12-26', 'hfghr', 'hfghr', 'dfgdgdgd', 'dfgdgdgd', 'DSC_1599.jpg'),
-(15, '2019-12-18', 'dfsdfs', 'dfsdfs', 'fdgdsfadfafsg', 'fdgdsfadfafsg', 'it'),
-(16, '2019-12-25', 'ddfgfd', 'ddfgfd', 'dgfsgsdfs', 'dgfsgsdfs', NULL);
 
 -- --------------------------------------------------------
 
@@ -158,15 +133,6 @@ CREATE TABLE `cld_video` (
   `LinkImg` varchar(255) DEFAULT NULL,
   `Sorgente` int(100) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
---
--- Dump dei dati per la tabella `cld_video`
---
-
-INSERT INTO `cld_video` (`idVideo`, `TitoloIT`, `TitoloEN`, `LinkUrl`, `LinkImg`, `Sorgente`) VALUES
-(26, 'dfgdf', 'hhgf', 'https://www.youtube.com/watch?v=DmTD3mDCqcQ', 'DSC_1535.jpg', 1),
-(25, 'dgfd', 'dfgdf', 'https://www.youtube.com/watch?v=EFO-jEenE7A', 'DSC_1526.jpg', 1),
-(23, 'gdfg', NULL, 'https://www.youtube.com/watch?v=sChj3lNnclk', 'DSC_1536.jpg', 1);
 
 --
 -- Indici per le tabelle scaricate
@@ -222,7 +188,7 @@ ALTER TABLE `cld_video`
 -- AUTO_INCREMENT per la tabella `cld_catgalleria`
 --
 ALTER TABLE `cld_catgalleria`
-  MODIFY `idCategoria` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `idCategoria` int(100) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT per la tabella `cld_contenuti`
@@ -234,7 +200,7 @@ ALTER TABLE `cld_contenuti`
 -- AUTO_INCREMENT per la tabella `cld_galleria`
 --
 ALTER TABLE `cld_galleria`
-  MODIFY `idGalleria` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `idGalleria` int(100) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT per la tabella `cld_galleria_imp`
@@ -246,7 +212,7 @@ ALTER TABLE `cld_galleria_imp`
 -- AUTO_INCREMENT per la tabella `cld_news`
 --
 ALTER TABLE `cld_news`
-  MODIFY `idNews` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `idNews` int(100) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT per la tabella `cld_utenti`
@@ -258,7 +224,7 @@ ALTER TABLE `cld_utenti`
 -- AUTO_INCREMENT per la tabella `cld_video`
 --
 ALTER TABLE `cld_video`
-  MODIFY `idVideo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `idVideo` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
